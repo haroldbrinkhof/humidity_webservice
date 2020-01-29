@@ -24,7 +24,7 @@ public class HumidityApplication {
 		Ini ini = null;	
 		try{
 			// load our secret variables from the configuration file
-			ini = new Ini(new File("config.ini"));
+			ini = new Ini(new File("/usr/local/etc/humidityApplication/config.ini"));
 			java.util.prefs.Preferences prefs = new IniPreferences(ini);
 			HumidityApplication.password = prefs.node("general").get("password", null);
 			HumidityApplication.dbPassword = prefs.node("database").get("password", null);
